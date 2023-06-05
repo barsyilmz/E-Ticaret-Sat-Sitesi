@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Etrade.Entity.Models.Entities.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <br /><br />
+    <h1>Eticaret Demo</h1>
+    <p class="col-md-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sunt id mollitia ut et eum velit dolores quos? Expedita ut odit, minus fugit nemo in.</p>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="2000">
+                <img src="~/img/karasel1.PNG" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/img/karosel2.PNG" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br><br />
+    @await Html.PartialAsync("_ProductList", Model)
+    @*<partial name="_ProductList" for="@Model">*@
+</>
